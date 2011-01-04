@@ -9,7 +9,7 @@ Samples.pathsPage = SC.Page.design({
   mainView: SC.View.design({
     classNames: ['path-sample'],
     layout: { top: 30, left: 0, right: 0, bottom: 0 },
-    childViews: 'line triangle curve complex'.w(),
+    childViews: 'line triangle curve complex dots'.w(),
     
     line: Sai.CanvasView.design({
       layout: { left: 10, top: 20, height: 200, width: 310 },
@@ -66,6 +66,40 @@ Samples.pathsPage = SC.Page.design({
         fill: 'lightgreen',
         strokeWidth: 5,
         path: 'M140,50 C70,180 195,180 190,100'
+      })
+    }),
+    
+    dots: Sai.CanvasView.design({
+      layout: { left: 10, top: 440, width: 310, height: 200 },
+      childElements: 'none dot dash alternate'.w(),
+      backgroundColor: 'white',
+      
+      none: Sai.Path.create({
+        stroke: 'red',
+        dotted: 'none',
+        strokeWidth: 3,
+        path: 'M10,40L300,45'
+      }),
+      
+      dot: Sai.Path.create({
+        stroke: 'red',
+        dotted: 'dot',
+        strokeWidth: 3,
+        path: 'M10,80L300,85'
+      }),
+      
+      dash: Sai.Path.create({
+        stroke: 'red',
+        dotted: 'dash',
+        strokeWidth: 3,
+        path: 'M10,120L300,125'
+      }),
+      
+      alternate: Sai.Path.create({
+        stroke: 'red',
+        dotted: 'alternate',
+        strokeWidth: 3,
+        path: 'M10,160L300,165'
       })
     })
   })

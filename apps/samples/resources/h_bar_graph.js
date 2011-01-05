@@ -95,16 +95,26 @@ Samples.hBarGraphsPage = SC.Page.design({
         layout: { left: 445, top: 1000, width: 400, height: 300 },
         data: [ [20, 23], [15, 21] ],
         dataAttrs: { horizontal: YES, colors: ['blue', 'red'], stroke: 'black', strokeWidth: 1 },
-        legend: [ 'Test A', 'Test B', 'Test C'],
-        chartLayout: { top: 30 },
-        legendAttrs: {
-          width: 300,
-          sampleBarSize: 10,
-          align: 'left',
-          fontSize: 15,
-          labelColor: 'black',
-          defaultBarColor: 'green',
-          position: 'top'
+        chartLayout: { right: 90 },
+        legend: {
+          labels: ['Label A', 'Label C'],
+          layout: {
+            height: 80,
+            width: 70,
+            valign: 'center',
+            halign: 'fill',
+            position: 'right'
+          },
+          text: {
+            align: 'center',
+            fontSize: 14,
+            fill: 'black'
+          },
+          sample: {
+            colors: ['red', 'blue'],
+            shape: 'circle',
+            size: {width: 13, height: 13}
+          }
         },
         backgroundColor: 'white'
       })

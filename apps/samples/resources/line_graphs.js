@@ -41,16 +41,28 @@ Samples.lineGraphsPage = SC.Page.design({
         grid: {color: 'lightgrey'},
         yaxis: {min: 0, max: 100, step: 5, weight: 1, color: 'black'},
         xaxis: {min: 0, max: 100, step: 5, weight: 1, color: 'black'},
-        chartLayout: { left: 10, right: 130, top: 10, bottom: 10 },
-        legend: ['Line A', 'Line B', 'Line not in graph'],
-        legendAttrs: { 
-          height: 80,
-          sampleBarSize: 10,
-          align: 'left',
-          fontSize: 12,
-          labelColor: 'black',
-          defaultBarColor: '#aaa',
-          colors: ['red', '#32CD32', '#FF8C00', '#1E90FF']
+        chartLayout: { left: 10, right: 150, top: 10, bottom: 10 },
+        legend: {
+          labels: ['Red line', 'Green line', 'Line not in chart'],
+          layout: {
+            height: 80,
+            width: 120,
+            valign: 'center',
+            halign: 'right',
+            position: 'right'
+          },
+          text: {
+            fontSize: 12,
+            fill: 'black',
+            stroke: 'black'
+          },
+          sample: {
+            colors: ['red', 'green'],
+            shape: 'triangle',
+            size: { width: 10, height: 10 },
+            stroke: 'black',
+            strokeWidth: '1'
+          }
         }
       })
     })

@@ -79,16 +79,27 @@ Samples.barGraphsPage = SC.Page.design({
         layout: { left: 445, top: 1000, width: 400, height: 300 },
         data: [ [20, 23], [15, 21] ],
         dataAttrs: { colors: ['blue', 'red'], stroke: 'black', strokeWidth: 1 },
-        legend: [ 'Test A', 'Test B', 'Test C'],
-        chartLayout: { top: 30 },
-        legendAttrs: {
-          width: 300,
-          sampleBarSize: 10,
-          align: 'left',
-          fontSize: 15,
-          labelColor: 'black',
-          defaultBarColor: 'green',
-          position: 'top'
+        chartLayout: { top: 25 },
+        legend: {
+          labels: ['Label A', 'Label B', 'Label C'],
+          layout: {
+            width: 300,
+            valign: 'fill',
+            halign: 'center',
+            position: 'top'
+          },
+          text: {
+            align: 'center',
+            fontSize: 14,
+            fill: 'black'
+          },
+          sample: {
+            colors: ['red', 'blue', 'green'],
+            shape: 'rect',
+            size: {width: 10, height: 10},
+            stroke: 'black',
+            strokeWidth: 1
+          }
         },
         backgroundColor: 'white'
       })

@@ -24,11 +24,12 @@ Samples.graphsSourceController = SC.ArrayController.create(
     var root = [
       SC.Object.create({ name: "Line Graph", view: 'Samples.lineGraphsPage.mainView'}),
       SC.Object.create({ name: "Bar Graph", view: 'Samples.barGraphsPage.mainView'}),
-      SC.Object.create({ name: "H-Bar Graph", view: 'Samples.hBarGraphsPage.mainView'})
+      SC.Object.create({ name: "H-Bar Graph", view: 'Samples.hBarGraphsPage.mainView'}),
+      SC.Object.create({ name: 'Pie Chart', view: 'Samples.pieChartsPage.mainView' })
     ];
     
     this.set('content', root);
-    this.set('selection', SC.SelectionSet.create().addObject(root[0]) );
+    this.set('selection', SC.SelectionSet.create().addObject(root[3]) );
   },
   
   graphSelected: function(){

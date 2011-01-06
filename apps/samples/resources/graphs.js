@@ -23,8 +23,8 @@ Samples.graphsPage = SC.Page.design({
     
     detail: SC.SceneView.design({
       layout: {top: 10, left: 160, right: 10, bottom: 10},
-      scenes: ['Samples.lineGraphsPage.mainView', 'Samples.barGraphsPage.mainView', 'Samples.hBarGraphsPage.mainView'],
-      nowShowing: 'Samples.hBarGraphsPage.mainView'
+      scenes: ['Samples.lineGraphsPage.mainView', 'Samples.barGraphsPage.mainView', 'Samples.hBarGraphsPage.mainView', 'Samples.pieChartsPage.mainView'],
+      nowShowing: 'Samples.pieChartsPage.mainView'
     })
   })  
 });

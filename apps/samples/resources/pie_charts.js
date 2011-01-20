@@ -69,12 +69,7 @@ Samples.pieChartsPage = SC.Page.design({
       backgroundColor: 'white',
       spinnerOverlayColor: 'red',
       spinnerOverlayOpacity: 0.25,
-      spinnerSize: 60,
-      
-      renderCanvas: function(canvas, firstTime) {
-        sc_super();
-        this.renderSpinner(canvas, firstTime);
-      }
+      spinnerSize: 60
     })
   })
 });
